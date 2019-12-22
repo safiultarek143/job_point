@@ -59,9 +59,9 @@
                 </a>
             </li>
             @if(Auth::user()->user_type_id == 1)
-                <li class="">
-                    <a href="">
-                        <i class="fa fa-laptop"></i>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Profile</span>
                     </a>
                 </li>
@@ -69,27 +69,22 @@
 
             @if(Auth::user()->user_type_id == 2)
                 <li >
-                    <a href="#">
-                        <i class="fa fa-laptop"></i>
+                    <a href="{{ route('create.job') }}">
+                        <i class="fa fa-adn"></i>
                         <span>Post New Job</span>
                     </a>
                 </li>
             @endif
 
-            <li class="navbar-light">
-                <a class="nav-item -business-time" href="">
-                    <i class="fa fa-search-location"></i>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('all.job')}}">
+                    <i class="fas fa-fw badge-light"></i>
                     <span>All Job</span>
                 </a>
-
             </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-fw-"></i>
-                    <span>Products</span>
-                </a>
-            </li>
+
         </ul>
     @endif
     <!-- /.container-fluid -->

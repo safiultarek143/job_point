@@ -17,6 +17,7 @@ class CreateJobPostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('job_title');
             $table->string('company_Name');
+            $table->string('company_id');
             $table->string('jOb_description');
             $table->integer('salary');
             $table->string('location');

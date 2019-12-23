@@ -22,3 +22,5 @@ Route::get('/create-job-post', 'JobPostController@create')->name('create.job');
 Route::post('/store-job-post', 'JobPostController@store')->name('store.job');
 Route::get('/all-job-post', 'JobPostController@alljob')->name('all.job');
 Route::get('/view-job-post/{id}', 'JobPostController@viewjob')->name('view.job');
+Route::post('job-application-store/{job_id}/{company_id}', 'JobApplicationController@store')->name('job.application.store');
+

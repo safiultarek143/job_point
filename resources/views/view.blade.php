@@ -74,7 +74,7 @@
                         @if(Auth::user()->user_type_id == 1)
                             <tr>
                                 <td colspan="2">
-                                    <form method="POST" action="#">
+                                    <form method="POST" action="{{ route('job.application.store', [$jobpost->id, $jobpost->company_id ]) }}">
                                         @csrf
                                         <center><button onclick="return confirm('Are you sure to Apply this JOB ??')" type="submit"  class="btn btn-primary ">Apply Now</button></center>
 

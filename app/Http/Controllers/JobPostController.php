@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\JobPost;
+use Auth;
 
 
 class JobPostController extends Controller
@@ -31,6 +32,7 @@ class JobPostController extends Controller
         $jobpost = new JobPost();
         $jobpost->Job_title = $request->job_title;
         $jobpost->Company_Name = $request->company_Name;
+        $jobpost->company_id = Auth::id();
         $jobpost->jOb_description = $request->jOb_description;
         $jobpost->salary = $request->salary;
         $jobpost->location = $request->location;

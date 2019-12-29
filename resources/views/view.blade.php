@@ -76,7 +76,13 @@
                                 <td colspan="2">
                                     <form method="POST" action="{{ route('job.application.store', [$jobpost->id, $jobpost->company_id ]) }}">
                                         @csrf
-                                        <center><button onclick="return confirm('Are you sure to Apply this JOB ??')" type="submit"  class="btn btn-primary ">Apply Now</button></center>
+                                        @if($jobpost->applicant)
+                                        @if($jobpost->applicant->applicant_id == Auth::user()->id)
+                                            <center><button class="btn btn-success " disabled>Already Applied</button></center>
+                                        @endif
+                                        @else
+                                            <center><button onclick="return confirm('Are you sure to Apply this JOB ??')" type="submit"  class="btn btn-primary ">Apply Now</button></center>
+                                        @endif
 
 
                                     </form>

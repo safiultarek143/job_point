@@ -22,21 +22,21 @@
                                 <th>publishing date</th>
                                 <th>Action</th>
                             </tr>
-                            @php
-                                $i = 1;
-                            @endphp
-                            @foreach($alljobs as $alljob)
-                                <tr>
-                                    <td>{{ $i++ }}</td>
-                                    <td>{{ $alljob->job_title }}</td>
-                                    <td>{{ $alljob->company_Name}}</td>
-                                    <td>{{ $alljob->salary }}</td>
-                                    <td>{{ $alljob->created_at }}</td>
-                                    <td>
-                                        <a href="{{ route('view.job', $alljob->id) }}" class="btn btn-outline-primary">view Details</a>
-                                    </td>
-                                </tr>
-                            @endforeach
+{{--                            @php--}}
+{{--                                $i = 1;--}}
+{{--                            @endphp--}}
+{{--                            @foreach($alljobs as $alljob)--}}
+{{--                                <tr>--}}
+{{--                                    <td>{{ $i++ }}</td>--}}
+{{--                                    <td>{{ $alljob->job_title }}</td>--}}
+{{--                                    <td>{{ $alljob->company_Name}}</td>--}}
+{{--                                    <td>{{ $alljob->salary }}</td>--}}
+{{--                                    <td>{{ $alljob->created_at }}</td>--}}
+{{--                                    <td>--}}
+{{--                                        <a href="{{ route('view.job', $alljob->id) }}" class="btn btn-outline-primary">view Details</a>--}}
+{{--                                    </td>--}}
+{{--                                </tr>--}}
+{{--                            @endforeach--}}
 
                         </table>
                     </div>

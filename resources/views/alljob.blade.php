@@ -18,7 +18,10 @@
                                 <th>company name</th>
                                 <th>salary</th>
                                 <th>publishing date</th>
-                                <th>Action</th>
+                                @if(Auth::user()->user_type_id == 2)
+                                    <th>All Applicants</th>
+                                @endif
+                                 <th>Action</th>
                             </tr>
                             @php
                                 $i = 1;
@@ -30,6 +33,9 @@
                                     <td>{{ $alljob->company_Name}}</td>
                                     <td>{{ $alljob->salary }}</td>
                                     <td>{{ $alljob->created_at }}</td>
+                                    <td>
+                                        <a href="{{route('job.applicant',$alljob->id)}}" class="btn btn-outline-primary">All Applicants</a>
+                                    </td>
                                     <td>
                                         <a href="{{ route('view.job', $alljob->id) }}" class="btn btn-outline-primary">view Details</a>
                                     </td>
